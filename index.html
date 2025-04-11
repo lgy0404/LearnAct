@@ -439,6 +439,13 @@
                       <th>Tasks</th>
                       <th>Apps</th>
                       <th>Step actions</th>
+                      <th>Avg Ins<sub>Sim</sub></th>
+                      <th>Avg UI<sub>Sim</sub></th>
+                      <th>Avg Act<sub>Sim</sub></th>
+                      <th>UI<sub>SH</sub>Act<sub>SH</sub></th>
+                      <th>UI<sub>SH</sub>Act<sub>SL</sub></th>
+                      <th>UI<sub>SL</sub>Act<sub>SH</sub></th>
+                      <th>UI<sub>SL</sub>Act<sub>SL</sub></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -448,6 +455,13 @@
                       <td>2,001</td>
                       <td>44</td>
                       <td>26,184</td>
+                      <td>0.845</td>
+                      <td>0.901</td>
+                      <td>0.858</td>
+                      <td>364</td>
+                      <td>400</td>
+                      <td>403</td>
+                      <td>834</td>
                     </tr>
                     <tr>
                       <td>Offline-Train</td>
@@ -455,6 +469,13 @@
                       <td>2,001</td>
                       <td>44</td>
                       <td>26,184</td>
+                      <td>0.818</td>
+                      <td>0.898</td>
+                      <td>0.845</td>
+                      <td>216</td>
+                      <td>360</td>
+                      <td>358</td>
+                      <td>1,067</td>
                     </tr>
                     <tr>
                       <td>Offline-Train</td>
@@ -462,6 +483,13 @@
                       <td>2,001</td>
                       <td>44</td>
                       <td>26,184</td>
+                      <td>0.798</td>
+                      <td>0.895</td>
+                      <td>0.836</td>
+                      <td>152</td>
+                      <td>346</td>
+                      <td>310</td>
+                      <td>1,193</td>
                     </tr>
                     <tr>
                       <td>Offline-Test</td>
@@ -469,6 +497,13 @@
                       <td>251</td>
                       <td>9</td>
                       <td>3,469</td>
+                      <td>0.798</td>
+                      <td>0.868</td>
+                      <td>0.867</td>
+                      <td>37</td>
+                      <td>49</td>
+                      <td>56</td>
+                      <td>109</td>
                     </tr>
                     <tr>
                       <td>Offline-Test</td>
@@ -476,6 +511,13 @@
                       <td>251</td>
                       <td>9</td>
                       <td>3,469</td>
+                      <td>0.767</td>
+                      <td>0.855</td>
+                      <td>0.853</td>
+                      <td>15</td>
+                      <td>42</td>
+                      <td>55</td>
+                      <td>139</td>
                     </tr>
                     <tr>
                       <td>Offline-Test</td>
@@ -483,6 +525,13 @@
                       <td>251</td>
                       <td>9</td>
                       <td>3,469</td>
+                      <td>0.745</td>
+                      <td>0.847</td>
+                      <td>0.847</td>
+                      <td>10</td>
+                      <td>36</td>
+                      <td>49</td>
+                      <td>156</td>
                     </tr>
                     <tr>
                       <td>Online-Test</td>
@@ -490,13 +539,19 @@
                       <td>101</td>
                       <td>20</td>
                       <td>1,423</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <p class="has-text-centered is-size-7 mt-2">
-                <strong>Table:</strong> Statistics of LearnGUI dataset splits. Each split is analyzed by number of
-                tasks, apps, and total action steps.
+                <strong>Table:</strong> Statistics of LearnGUI dataset splits. Each split is analyzed across multiple dimensions: Tasks (number of tasks), Apps (number of applications covered), Step actions (total action steps), similarity metrics (Avg Ins/UI/Act<sub>Sim</sub>), and distribution across four similarity profiles categorized by high (SH) and low (SL) UI and action similarity.
               </p>
             </div>
           </div>
@@ -835,19 +890,19 @@
           <div class="item">
             <img src="static/images/png/case-study1-1.png" alt="Case Study 1" />
             <h2 class="subtitle has-text-centered">
-              Case Study 1: Complex navigation with LearnAct assistance
+              Case Study 1: UI-TARS-7B-SFT with LearnAct vs. Baseline in NotesRecipeIngredientCount Task.
             </h2>
           </div>
           <div class="item">
             <img src="static/images/png/case-study2-1.png" alt="Case Study 2" />
             <h2 class="subtitle has-text-centered">
-              Case Study 2: LearnAct helping with unfamiliar interface patterns
+              Case Study 2: UI-TARS-7B-SFT with LearnAct vs. Baseline in SimpleCalendarDeleteOneEvent Task.
             </h2>
           </div>
           <div class="item">
             <img src="static/images/png/case-study3-1.png" alt="Case Study 3" />
             <h2 class="subtitle has-text-centered">
-              Case Study 3: Addressing common failure modes with demonstrations
+              Case Study 3: Qwen2-VL-7B with LearnAct vs. Baseline in ExpenseDeleteMultiple Task.
             </h2>
           </div>
         </div>
