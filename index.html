@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <meta name="description" content="LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark">
+  <meta property="og:title" content="LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark" />
+  <meta property="og:description"
+    content="A comprehensive benchmark and framework for enhancing mobile GUI agents through few-shot demonstrations" />
+  <meta property="og:url" content="https://lgy0404.github.io/LearnGUI" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/teaser-final.drawio.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark">
+  <meta name="twitter:description"
+    content="A comprehensive benchmark and framework for enhancing mobile GUI agents through few-shot demonstrations">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/teaser-final.drawio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Mobile GUI, Few-Shot Learning, Demonstrations, Mobile Agents, Human-AI Interaction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LearnAct: Few-Shot Mobile GUI Agent with a Unified
+              Demonstration Benchmark
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/lgy0404" target="_blank">Guangyi Liu</a><sup>1&#8224;</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Pengxiang Zhao</a><sup>1&#8224;</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Liang Liu</a><sup>2&#8225;</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Zhiming Chen</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Yuxiang Chai</a><sup>2</sup>
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="#" target="_blank">Shuai Ren</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Hao Wang</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Shibo He</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Wenchao Meng</a><sup>1&#9993;</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup> Zhejiang University &nbsp;&nbsp;&nbsp;<sup>2</sup> vivo AI Lab
+              </span>
+              <span class="eql-cntrb"><small><br>
+                  <sup>&#8224;</sup> Equal Contribution <br>
+                  <sup>&#8225;</sup> Project Leader <br>
+                  <sup>&#9993;</sup> Corresponding Author
+                </small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2504.13805" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/lgy0404/LearnAct" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Dataset Link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/lgy0404/LearnGUI" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser-final.drawio.png" alt="LearnGUI Overview" width="100%">
+        <h2 class="subtitle has-text-centered">
+          The LearnAct Framework and LearnGUI Benchmark focus on addressing the long-tail challenges in mobile GUI agent
+          performance through demonstration-based learning.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Mobile GUI agents show promise in automating tasks but face generalization challenges in diverse
+              real-world scenarios. Traditional approaches using pre-training or fine-tuning with massive datasets
+              struggle with the diversity of mobile applications and user-specific tasks. We propose enhancing mobile
+              GUI agent capabilities through human demonstrations, focusing on improving performance in unseen scenarios
+              rather than pursuing universal generalization through larger datasets.
+            </p>
+            <p>
+              To realize this paradigm, we introduce LearnGUI, the first comprehensive dataset specifically designed for
+              studying demonstration-based learning in mobile GUI agents. It comprises 2,252 offline tasks and 101
+              online tasks with high-quality human demonstrations. We further develop LearnAct, a sophisticated
+              multi-agent framework that automatically extracts knowledge from demonstrations to enhance task
+              completion. This framework integrates three specialized agents: DemoParser for knowledge extraction,
+              KnowSeeker for relevant knowledge retrieval, and ActExecutor for demonstration-enhanced task execution.
+            </p>
+            <p>
+              Our experimental results show significant performance gains in both offline and online evaluations. In
+              offline assessments, a single demonstration improves model performance, increasing Gemini-1.5-Pro's
+              accuracy from 19.3% to 51.7%. In online evaluations, our framework enhances UI-TARS-7B-SFT's task success
+              rate from 18.1% to 32.8%. LearnAct framework and LearnGUI benchmark establish demonstration-based learning
+              as a promising direction for more adaptable, personalized, and deployable mobile GUI agents.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">LearnAct Framework</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- LearnAct Pipeline -->
+            <img src="static/images/learnact-pipline.drawio.png" alt="LearnAct Pipeline" />
+            <h2 class="subtitle has-text-centered">
+              LearnAct: A multi-agent framework that automatically extracts knowledge from demonstrations to enhance
+              task completion.
+            </h2>
+          </div>
+          <div class="item">
+            <!-- DemoParser -->
+            <img src="static/images/png/demoparser-1.png" alt="DemoParser" />
+            <h2 class="subtitle has-text-centered">
+              DemoParser: Extracts usable knowledge from demonstration trajectories.
+            </h2>
+          </div>
+          <div class="item">
+            <!-- KnowSeeker -->
+            <img src="static/images/png/knowseeker-1.png" alt="KnowSeeker" />
+            <h2 class="subtitle has-text-centered">
+              KnowSeeker: Retrieves demonstration knowledge relevant to current tasks.
+            </h2>
+          </div>
+          <div class="item">
+            <!-- ActExecutor -->
+            <img src="static/images/png/actexecutor-1.png" alt="ActExecutor" />
+            <h2 class="subtitle has-text-centered">
+              ActExecutor: Combines instructions, GUI environment, and demonstration knowledge.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+  <!-- Dataset section -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">LearnGUI Dataset</h2>
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="content">
+              <p class="has-text-justified">
+                The LearnGUI dataset is a comprehensive collection designed for studying demonstration-based learning
+                in mobile GUI agents, featuring 2,353 instructions across 73 applications with an average of 13.2
+                steps per task.
+              </p>
+              <ul>
+                <li><strong>Rich Few-shot Learning Support</strong>: Provides k-shot combinations (k=1,2,3) for each
+                  task</li>
+                <li><strong>Multi-dimensional Similarity Metrics</strong>: Covers instruction, UI, and action dimensions
+                </li>
+                <li><strong>Natural Task Variation</strong>: Reflects real-world mobile task diversity within
+                  applications</li>
+                <li><strong>Systematic Analysis Framework</strong>: Enables detailed study of demonstration impact on
+                  learning outcomes</li>
+              </ul>
+              <div class="has-text-centered">
+                <img src="static/images/png/data-1.png" alt="LearnGUI Dataset" style="max-width: 80%;">
+              </div>
+              <h3 class="title is-4">Dataset Comparison</h3>
+              <div class="table-container" style="overflow-x: auto;">
+                <table class="table is-bordered is-narrow is-hoverable is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th>Dataset</th>
+                      <th># Instructions</th>
+                      <th># Apps</th>
+                      <th># Steps</th>
+                      <th>Environment</th>
+                      <th>High-level</th>
+                      <th>Low-level</th>
+                      <th>Ground Truth</th>
+                      <th>Few-shot</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>PixelHelp</td>
+                      <td>187</td>
+                      <td>4</td>
+                      <td>4.2</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>MoTIF</td>
+                      <td>276</td>
+                      <td>125</td>
+                      <td>4.5</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>UIBert</td>
+                      <td>16,660</td>
+                      <td>-</td>
+                      <td>1</td>
+                      <td>❌</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>UGIF</td>
+                      <td>523</td>
+                      <td>12</td>
+                      <td>6.3</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>AITW</td>
+                      <td>30,378</td>
+                      <td>357</td>
+                      <td>6.5</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>AITZ</td>
+                      <td>2,504</td>
+                      <td>70</td>
+                      <td>7.5</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>AndroidControl</td>
+                      <td>15,283</td>
+                      <td>833</td>
+                      <td>4.8</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>AMEX</td>
+                      <td>2,946</td>
+                      <td>110</td>
+                      <td>12.8</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>MobileAgentBench</td>
+                      <td>100</td>
+                      <td>10</td>
+                      <td>-</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                      <td>❌</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>AppAgent</td>
+                      <td>50</td>
+                      <td>10</td>
+                      <td>-</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                      <td>❌</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>LlamaTouch</td>
+                      <td>496</td>
+                      <td>57</td>
+                      <td>7.01</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>AndroidWorld</td>
+                      <td>116</td>
+                      <td>20</td>
+                      <td>-</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                      <td>❌</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr>
+                      <td>AndroidLab</td>
+                      <td>138</td>
+                      <td>9</td>
+                      <td>8.5</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>❌</td>
+                      <td>❌</td>
+                      <td>❌</td>
+                    </tr>
+                    <tr class="has-text-weight-bold">
+                      <td>LearnGUI (Ours)</td>
+                      <td>2,353</td>
+                      <td>73</td>
+                      <td>13.2</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                      <td>✅</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="has-text-centered is-size-7 mt-2">
+                <strong>Table:</strong> Comparison of different datasets and environments for benchmarking Mobile GUI
+                agents.
+                Column definitions: # Inst. (number of instructions), # Apps (number of applications), # Step (average
+                steps per task),
+                Env. (supports environment interactions), HL (has high-level instructions), LL (has low-level
+                instructions),
+                GT (provides ground truth trajectories), FS (supports few-shot learning).
+              </p>
+
+              <h3 class="title is-4">Dataset Statistics</h3>
+              <div class="table-container" style="overflow-x: auto;">
+                <table class="table is-bordered is-narrow is-hoverable is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th>Split</th>
+                      <th>K-shot</th>
+                      <th>Tasks</th>
+                      <th>Apps</th>
+                      <th>Step actions</th>
+                      <th>Avg Ins<sub>Sim</sub></th>
+                      <th>Avg UI<sub>Sim</sub></th>
+                      <th>Avg Act<sub>Sim</sub></th>
+                      <th>UI<sub>SH</sub>Act<sub>SH</sub></th>
+                      <th>UI<sub>SH</sub>Act<sub>SL</sub></th>
+                      <th>UI<sub>SL</sub>Act<sub>SH</sub></th>
+                      <th>UI<sub>SL</sub>Act<sub>SL</sub></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Offline-Train</td>
+                      <td>1-shot</td>
+                      <td>2,001</td>
+                      <td>44</td>
+                      <td>26,184</td>
+                      <td>0.845</td>
+                      <td>0.901</td>
+                      <td>0.858</td>
+                      <td>364</td>
+                      <td>400</td>
+                      <td>403</td>
+                      <td>834</td>
+                    </tr>
+                    <tr>
+                      <td>Offline-Train</td>
+                      <td>2-shot</td>
+                      <td>2,001</td>
+                      <td>44</td>
+                      <td>26,184</td>
+                      <td>0.818</td>
+                      <td>0.898</td>
+                      <td>0.845</td>
+                      <td>216</td>
+                      <td>360</td>
+                      <td>358</td>
+                      <td>1,067</td>
+                    </tr>
+                    <tr>
+                      <td>Offline-Train</td>
+                      <td>3-shot</td>
+                      <td>2,001</td>
+                      <td>44</td>
+                      <td>26,184</td>
+                      <td>0.798</td>
+                      <td>0.895</td>
+                      <td>0.836</td>
+                      <td>152</td>
+                      <td>346</td>
+                      <td>310</td>
+                      <td>1,193</td>
+                    </tr>
+                    <tr>
+                      <td>Offline-Test</td>
+                      <td>1-shot</td>
+                      <td>251</td>
+                      <td>9</td>
+                      <td>3,469</td>
+                      <td>0.798</td>
+                      <td>0.868</td>
+                      <td>0.867</td>
+                      <td>37</td>
+                      <td>49</td>
+                      <td>56</td>
+                      <td>109</td>
+                    </tr>
+                    <tr>
+                      <td>Offline-Test</td>
+                      <td>2-shot</td>
+                      <td>251</td>
+                      <td>9</td>
+                      <td>3,469</td>
+                      <td>0.767</td>
+                      <td>0.855</td>
+                      <td>0.853</td>
+                      <td>15</td>
+                      <td>42</td>
+                      <td>55</td>
+                      <td>139</td>
+                    </tr>
+                    <tr>
+                      <td>Offline-Test</td>
+                      <td>3-shot</td>
+                      <td>251</td>
+                      <td>9</td>
+                      <td>3,469</td>
+                      <td>0.745</td>
+                      <td>0.847</td>
+                      <td>0.847</td>
+                      <td>10</td>
+                      <td>36</td>
+                      <td>49</td>
+                      <td>156</td>
+                    </tr>
+                    <tr>
+                      <td>Online-Test</td>
+                      <td>1-shot</td>
+                      <td>101</td>
+                      <td>20</td>
+                      <td>1,423</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="has-text-centered is-size-7 mt-2">
+                <strong>Table:</strong> Statistics of LearnGUI dataset splits. Each split is analyzed across multiple
+                dimensions: Tasks (number of tasks), Apps (number of applications covered), Step actions (total action
+                steps), similarity metrics (Avg Ins/UI/Act<sub>Sim</sub>), and distribution across four similarity
+                profiles categorized by high (SH) and low (SL) UI and action similarity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End dataset section -->
+
+  <!-- Results section -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Key Results</h2>
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="content">
+              <h3 class="title is-4">Offline Evaluation</h3>
+              <p class="has-text-justified">
+                A single demonstration dramatically improves model performance across diverse scenarios:
+              </p>
+
+              <div class="table-container" style="overflow-x: auto;">
+                <table class="table is-bordered is-narrow is-hoverable is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th>Models</th>
+                      <th>Method</th>
+                      <th>Supports</th>
+                      <th>Average</th>
+                      <th>Gmail</th>
+                      <th>Booking</th>
+                      <th>Music</th>
+                      <th>SHEIN</th>
+                      <th>NBC</th>
+                      <th>CityMapper</th>
+                      <th>ToDo</th>
+                      <th>Signal</th>
+                      <th>Yelp</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>SPHINX-GUI Agent</td>
+                      <td>AMEX</td>
+                      <td>0-shot</td>
+                      <td>67.2</td>
+                      <td>45.9</td>
+                      <td>64.5</td>
+                      <td>74.4</td>
+                      <td>71.8</td>
+                      <td>70.3</td>
+                      <td>67.4</td>
+                      <td>79.3</td>
+                      <td>64.9</td>
+                      <td>66.3</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">gemini-1.5-pro</td>
+                      <td>Baseline</td>
+                      <td>0-shot</td>
+                      <td>19.3</td>
+                      <td>20.1</td>
+                      <td>16.4</td>
+                      <td>24.5</td>
+                      <td>10.2</td>
+                      <td>35.6</td>
+                      <td>14.1</td>
+                      <td>17.4</td>
+                      <td>27.9</td>
+                      <td>15.2</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">LearnAct</td>
+                      <td>1-shot</td>
+                      <td>51.7 <span class="has-text-success">[+32.4]</span></td>
+                      <td>55.5</td>
+                      <td>47.1</td>
+                      <td>60.0</td>
+                      <td>35.7</td>
+                      <td>56.4</td>
+                      <td>54.7</td>
+                      <td>60.6</td>
+                      <td>63.1</td>
+                      <td>54.6</td>
+                    </tr>
+                    <tr>
+                      <td>2-shot</td>
+                      <td>55.6 <span class="has-text-success">[+36.3]</span></td>
+                      <td>57.5</td>
+                      <td>53.2</td>
+                      <td>55.3</td>
+                      <td>39.6</td>
+                      <td>56.1</td>
+                      <td>58.2</td>
+                      <td>68.1</td>
+                      <td>69.7</td>
+                      <td>60.0</td>
+                    </tr>
+                    <tr>
+                      <td>3-shot</td>
+                      <td>57.7 <span class="has-text-success">[+38.4]</span></td>
+                      <td>58.4</td>
+                      <td>56.6</td>
+                      <td>54.6</td>
+                      <td>43.9</td>
+                      <td>53.9</td>
+                      <td>69.4</td>
+                      <td>69.2</td>
+                      <td>70.5</td>
+                      <td>57.6</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">UI-TARS-7B-SFT</td>
+                      <td>Baseline</td>
+                      <td>0-shot</td>
+                      <td>77.5</td>
+                      <td>68.1</td>
+                      <td>81.0</td>
+                      <td>81.1</td>
+                      <td>72.9</td>
+                      <td>80.9</td>
+                      <td>70.6</td>
+                      <td>66.0</td>
+                      <td>92.6</td>
+                      <td>82.4</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">LearnAct</td>
+                      <td>1-shot</td>
+                      <td>82.8 <span class="has-text-success">[+5.3]</span></td>
+                      <td>79.9</td>
+                      <td>82.9</td>
+                      <td>86.6</td>
+                      <td>75.7</td>
+                      <td>86.3</td>
+                      <td>79.4</td>
+                      <td>84.0</td>
+                      <td>89.3</td>
+                      <td>83.0</td>
+                    </tr>
+                    <tr>
+                      <td>2-shot</td>
+                      <td>81.9 <span class="has-text-success">[+4.4]</span></td>
+                      <td>80.1</td>
+                      <td>80.7</td>
+                      <td>86.2</td>
+                      <td>76.1</td>
+                      <td>87.2</td>
+                      <td>80.0</td>
+                      <td>83.7</td>
+                      <td>84.4</td>
+                      <td>84.2</td>
+                    </tr>
+                    <tr>
+                      <td>3-shot</td>
+                      <td>82.1 <span class="has-text-success">[+4.6]</span></td>
+                      <td>79.9</td>
+                      <td>80.9</td>
+                      <td>86.2</td>
+                      <td>75.7</td>
+                      <td>86.9</td>
+                      <td>81.2</td>
+                      <td>85.8</td>
+                      <td>84.4</td>
+                      <td>84.2</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">Qwen2-VL-7B</td>
+                      <td>Baseline</td>
+                      <td>0-shot</td>
+                      <td>71.8</td>
+                      <td>60.8</td>
+                      <td>73.9</td>
+                      <td>76.0</td>
+                      <td>65.5</td>
+                      <td>75.5</td>
+                      <td>62.9</td>
+                      <td>78.7</td>
+                      <td>82.8</td>
+                      <td>69.1</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">LearnAct</td>
+                      <td>1-shot</td>
+                      <td>77.3 <span class="has-text-success">[+5.5]</span></td>
+                      <td>75.0</td>
+                      <td>77.5</td>
+                      <td>77.8</td>
+                      <td>69.8</td>
+                      <td>83.5</td>
+                      <td>72.9</td>
+                      <td>78.0</td>
+                      <td>83.6</td>
+                      <td>78.8</td>
+                    </tr>
+                    <tr>
+                      <td>2-shot</td>
+                      <td>78.5 <span class="has-text-success">[+6.7]</span></td>
+                      <td>75.0</td>
+                      <td>78.0</td>
+                      <td>77.8</td>
+                      <td>73.3</td>
+                      <td>86.0</td>
+                      <td>73.5</td>
+                      <td>81.9</td>
+                      <td>87.7</td>
+                      <td>77.6</td>
+                    </tr>
+                    <tr>
+                      <td>3-shot</td>
+                      <td>79.4 <span class="has-text-success">[+7.6]</span></td>
+                      <td>75.0</td>
+                      <td>78.8</td>
+                      <td>78.6</td>
+                      <td>72.6</td>
+                      <td>87.8</td>
+                      <td>77.1</td>
+                      <td>82.6</td>
+                      <td>87.7</td>
+                      <td>80.6</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="has-text-centered is-size-7 mt-2">
+                <strong>Table:</strong> Performance comparison of mobile GUI agents on LearnGUI-Offline dataset (action
+                match accuracy %).
+                Results show absolute values and relative improvements [in brackets] compared to baselines.
+              </p>
+
+              <h3 class="title is-4">Online Evaluation</h3>
+              <p class="has-text-justified">
+                Our framework demonstrates exceptional effectiveness in real-world scenarios:
+              </p>
+
+              <div class="table-container" style="overflow-x: auto;">
+                <table class="table is-bordered is-narrow is-hoverable is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th>Input</th>
+                      <th>Models</th>
+                      <th># Params</th>
+                      <th>LearnGUI-Online SR</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Image + AXTree</td>
+                      <td>GPT-4o</td>
+                      <td>-</td>
+                      <td>34.5</td>
+                    </tr>
+                    <tr>
+                      <td>Image + AXTree</td>
+                      <td>Gemini-Pro-1.5</td>
+                      <td>-</td>
+                      <td>22.8</td>
+                    </tr>
+                    <tr>
+                      <td>Image</td>
+                      <td>Claude Computer-Use</td>
+                      <td>-</td>
+                      <td>27.9</td>
+                    </tr>
+                    <tr>
+                      <td>Image</td>
+                      <td>Aguvis</td>
+                      <td>72B</td>
+                      <td>26.1</td>
+                    </tr>
+                    <tr>
+                      <td>Image</td>
+                      <td>Qwen2-VL-7B + 0-shot</td>
+                      <td>7B</td>
+                      <td>9.9</td>
+                    </tr>
+                    <tr class="has-background-info-light">
+                      <td>Image</td>
+                      <td>Qwen2-VL-7B + LearnAct</td>
+                      <td>7B</td>
+                      <td>21.1 <span class="has-text-success">[+11.2]</span></td>
+                    </tr>
+                    <tr>
+                      <td>Image</td>
+                      <td>UI-TARS-7B-SFT + 0-shot</td>
+                      <td>7B</td>
+                      <td>18.1</td>
+                    </tr>
+                    <tr class="has-background-info-light has-text-weight-bold">
+                      <td>Image</td>
+                      <td>UI-TARS-7B-SFT + LearnAct</td>
+                      <td>7B</td>
+                      <td>32.8 <span class="has-text-success">[+14.7]</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="has-text-centered is-size-7 mt-2">
+                <strong>Table:</strong> Performance comparison of different models on the LearnGUI-Online benchmark.
+                Comparison of models with different inputs (Image, Image+AXTree) and parameters, measuring task success
+                rate with improvements shown in brackets for models with LearnAct enhancement.
+              </p>
+
+              <ul>
+                <li>Gemini-1.5-Pro accuracy increases from 19.3% to 51.7% (a 198.9% relative improvement)</li>
+                <li>CityMapper app accuracy improves from 14.1% to 69.4%</li>
+                <li>To-Do apps accuracy increases from 17.4% to 69.2%</li>
+              </ul>
+
+              <div class="columns is-centered mt-4">
+                <div class="column is-6">
+                  <img src="static/images/png/ui_tars_learnact__online_comparison-1.png"
+                    alt="UI-TARS + LearnAct Results">
+                  <p class="has-text-centered"><strong>UI-TARS + LearnAct Results</strong></p>
+                </div>
+                <div class="column is-6">
+                  <img src="static/images/png/qwen_learnact_online_comparison-1.png" alt="Qwen + LearnAct Results">
+                  <p class="has-text-centered"><strong>Qwen + LearnAct Results</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End results section -->
+
+  <!-- Case studies section -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Case Studies</h2>
+        <div id="case-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/png/case-study1-1.png" alt="Case Study 1" />
+            <h2 class="subtitle has-text-centered">
+              Case Study 1: UI-TARS-7B-SFT with LearnAct vs. Baseline in NotesRecipeIngredientCount Task.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/png/case-study2-1.png" alt="Case Study 2" />
+            <h2 class="subtitle has-text-centered">
+              Case Study 2: UI-TARS-7B-SFT with LearnAct vs. Baseline in SimpleCalendarDeleteOneEvent Task.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/png/case-study3-1.png" alt="Case Study 3" />
+            <h2 class="subtitle has-text-centered">
+              Case Study 3: Qwen2-VL-7B with LearnAct vs. Baseline in ExpenseDeleteMultiple Task.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End case studies section -->
+
+  <!-- Comment out BibTex citation -->
+  <!--
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{liu2025learngui,
+  title={LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark},
+  author={Liu, Guangyi and Zhao, Pengxiang and Liu, Liang and Chen, Zhiming and Chai, Yuxiang and Ren, Shuai and Wang, Hao and He, Shibo and Meng, Wenchao},
+  journal={arXiv preprint},
+  year={2025}
+}</code></pre>
+    </div>
+  </section>
+  -->
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
