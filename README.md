@@ -66,7 +66,7 @@ The LearnAct framework consists of three specialized agents:
 3. **ActExecutor**: Combines instructions, GUI environment, and demonstration knowledge
 
 <div align="center">
-  <img src="assets/teaser-final.drawio.png" alt="LearnAct Pipeline" width="80%">
+  <img src="assets/learnact-pipline.drawio.png" alt="LearnAct Pipeline" width="80%">
 </div>
 
 ## 📈 Benchmark Results
