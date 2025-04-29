@@ -1,10 +1,18 @@
-# LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark
+<div align="center">
+  <h1><img src="assets/favicon.ico" alt="LearnAct Logo" width="48" height="48"> LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark</h1>
+</div>
+
+<div align="center">
+  <a href="https://arxiv.org/abs/2504.13805"><img src="https://img.shields.io/badge/Arxiv-2504.13805-b31b1b.svg?logo=arXiv" alt=""></a>
+  <a href="https://huggingface.co/datasets/lgy0404/LearnGUI"><img src="https://img.shields.io/badge/HuggingFace-LearnGUI-blue.svg" alt=""></a>
+  <a href="https://lgy0404.github.io/LearnAct/"><img src="https://img.shields.io/badge/Project-Page-Green"></a>
+  <a href="https://github.com/lgy0404/LearnAct/stargazers"><img src="https://img.shields.io/github/stars/lgy0404/LearnAct?style=social"></a>
+  <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
+</div>
 
 <div align="center">
   <img src="assets/teaser-final.drawio.png" alt="LearnAct Framework" width="100%">
 </div>
-
-[📄 Paper](https://arxiv.org/abs/2504.13805) | [🤗 Dataset](https://huggingface.co/datasets/lgy0404/LearnGUI) | [🌐 Project Page](https://lgy0404.github.io/LearnAct/)
 
 ## 🚀 News
 - 🥳 [2025/04/29] Released the inference and evaluation code for LearnAct on LearnGUI-Offline!
