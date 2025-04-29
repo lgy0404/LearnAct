@@ -33,20 +33,20 @@ LearnGUI offers several advantages over existing GUI datasets:
 
 | Dataset                   | # Inst.         | # Apps       | # Step         | Env. | HL | LL | GT | FS |
 | ------------------------- | --------------- | ------------ | -------------- | ---- | -- | -- | -- | -- |
-| PixelHelp                 | 187             | 4            | 4.2            | ❌   | ✅ | ❌ | ✅ | ❌ |
-| MoTIF                     | 276             | 125          | 4.5            | ❌   | ✅ | ✅ | ✅ | ❌ |
-| UIBert                    | 16,660          | -            | 1              | ❌   | ❌ | ✅ | ✅ | ❌ |
-| UGIF                      | 523             | 12           | 6.3            | ❌   | ✅ | ✅ | ✅ | ❌ |
-| AITW                      | 30,378          | 357          | 6.5            | ❌   | ✅ | ❌ | ✅ | ❌ |
-| AITZ                      | 2,504           | 70           | 7.5            | ❌   | ✅ | ✅ | ✅ | ❌ |
-| AndroidControl            | 15,283          | 833          | 4.8            | ❌   | ✅ | ✅ | ✅ | ❌ |
-| AMEX                      | 2,946           | 110          | 12.8           | ❌   | ✅ | ❌ | ✅ | ❌ |
-| MobileAgentBench          | 100             | 10           | -              | ❌   | ✅ | ❌ | ❌ | ❌ |
-| AppAgent                  | 50              | 10           | -              | ❌   | ✅ | ❌ | ❌ | ❌ |
-| LlamaTouch                | 496             | 57           | 7.01           | ✅   | ✅ | ❌ | ✅ | ❌ |
-| AndroidWorld              | 116             | 20           | -              | ✅   | ✅ | ❌ | ❌ | ❌ |
-| AndroidLab                | 138             | 9            | 8.5            | ✅   | ✅ | ❌ | ❌ | ❌ |
-| **LearnGUI (Ours)** | **2,353** | **73** | **13.2** | ✅   | ✅ | ✅ | ✅ | ✅ |
+| PixelHelp                 | 187             | 4            | 4.2            | ✗   | ✓ | ✗ | ✓ | ✗ |
+| MoTIF                     | 276             | 125          | 4.5            | ✗   | ✓ | ✓ | ✓ | ✗ |
+| UIBert                    | 16,660          | -            | 1              | ✗   | ✗ | ✓ | ✓ | ✗ |
+| UGIF                      | 523             | 12           | 6.3            | ✗   | ✓ | ✓ | ✓ | ✗ |
+| AITW                      | 30,378          | 357          | 6.5            | ✗   | ✓ | ✗ | ✓ | ✗ |
+| AITZ                      | 2,504           | 70           | 7.5            | ✗   | ✓ | ✓ | ✓ | ✗ |
+| AndroidControl            | 15,283          | 833          | 4.8            | ✗   | ✓ | ✓ | ✓ | ✗ |
+| AMEX                      | 2,946           | 110          | 12.8           | ✗   | ✓ | ✗ | ✓ | ✗ |
+| MobileAgentBench          | 100             | 10           | -              | ✗   | ✓ | ✗ | ✗ | ✗ |
+| AppAgent                  | 50              | 10           | -              | ✗   | ✓ | ✗ | ✗ | ✗ |
+| LlamaTouch                | 496             | 57           | 7.01           | ✓   | ✓ | ✗ | ✓ | ✗ |
+| AndroidWorld              | 116             | 20           | -              | ✓   | ✓ | ✗ | ✗ | ✗ |
+| AndroidLab                | 138             | 9            | 8.5            | ✓   | ✓ | ✗ | ✗ | ✗ |
+| **LearnGUI (Ours)** | **2,353** | **73** | **13.2** | ✓   | ✓ | ✓ | ✓ | ✓ |
 
 *Note: # Inst. (number of instructions), # Apps (number of applications), # Step (average steps per task), Env. (supports environment interactions), HL (has high-level instructions), LL (has low-level instructions), GT (provides ground truth trajectories), FS (supports few-shot learning).*
 
