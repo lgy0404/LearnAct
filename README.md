@@ -1,8 +1,5 @@
 <div align="center">
   <h1><img src="assets/favicon.ico" alt="LearnAct Logo" width="48" height="48"> LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark</h1>
-</div>
-
-<div align="center">
   <a href="https://arxiv.org/abs/2504.13805"><img src="https://img.shields.io/badge/Arxiv-2504.13805-b31b1b.svg?logo=arXiv" alt=""></a>
   <a href="https://huggingface.co/datasets/lgy0404/LearnGUI"><img src="https://img.shields.io/badge/HuggingFace-LearnGUI-blue.svg" alt=""></a>
   <a href="https://lgy0404.github.io/LearnAct/"><img src="https://img.shields.io/badge/Project-Page-Green"></a>
