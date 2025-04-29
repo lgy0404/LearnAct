@@ -6,6 +6,11 @@
 
 [📄 Paper](https://arxiv.org/abs/2504.13805) | [🤗 Dataset](https://huggingface.co/datasets/lgy0404/LearnGUI) | [🌐 Project Page](https://lgy0404.github.io/LearnAct/)
 
+## 🚀 News
+- 🥳 [2025/04/29] Released the inference and evaluation code for LearnAct on LearnGUI-Offline!
+- 🤩 [2025/04/21] Released the [LearnGUI Benchmark](https://huggingface.co/datasets/lgy0404/LearnGUI)! We invite researchers and developers to explore our comprehensive dataset for demonstration-based learning in mobile GUI agents. Your feedback is valuable to us!
+- 🎉 [2025/04/18] Published the paper [LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark](https://arxiv.org/abs/2504.13805)! Follow our work as we explore new frontiers in few-shot learning for mobile GUI agents. Star our repo to stay updated!
+
 ## Overview
 
 Mobile GUI agents show promise in automating tasks but face generalization challenges in diverse real-world scenarios. Traditional approaches using pre-training or fine-tuning with massive datasets struggle with the diversity of mobile applications and user-specific tasks. We propose enhancing mobile GUI agent capabilities through human demonstrations, focusing on improving performance in unseen scenarios rather than pursuing universal generalization through larger datasets.
@@ -124,6 +129,11 @@ If you find our work helpful, please consider citing our paper:
   year={2025}
 }
 ```
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lgy0404/LearnAct&type=Date)](https://star-history.com/#lgy0404/LearnAct&Date)
+
 
 ## 📄 License
 
