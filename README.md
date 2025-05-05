@@ -12,7 +12,8 @@
 </div>
 
 ## 🚀 News
-- 🥳 [2025/04/29] Released the inference and evaluation code for LearnAct on LearnGUI-Offline!
+
+- 🥳 [2025/05/05] Released the inference and evaluation code for LearnAct on LearnGUI-Offline!
 - 🤩 [2025/04/21] Released the [LearnGUI Benchmark](https://huggingface.co/datasets/lgy0404/LearnGUI)! We invite researchers and developers to explore our comprehensive dataset for demonstration-based learning in mobile GUI agents. Your feedback is valuable to us!
 - 🎉 [2025/04/18] Published the paper [LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark](https://arxiv.org/abs/2504.13805)! Follow our work as we explore new frontiers in few-shot learning for mobile GUI agents. Star our repo to stay updated!
 
@@ -79,6 +80,88 @@ The LearnAct framework consists of three specialized agents:
   <img src="assets/learnact-pipline.drawio.png" alt="LearnAct Pipeline" width="80%">
 </div>
 
+## 🛠️ Getting Started with LearnAct on LearnGUI-Offline
+
+Follow these steps to run and evaluate LearnAct on the LearnGUI-Offline benchmark:
+
+### Step 1: Environment Setup
+
+First, create a new conda environment and install the required dependencies:
+
+```bash
+# Create a new conda environment
+conda create -n learnact python=3.9
+conda activate learnact
+
+# Install requirements
+pip install -r requirements.txt
+```
+
+### Step 2: Download the LearnGUI Dataset
+
+Download the LearnGUI dataset from [Hugging Face](https://huggingface.co/datasets/lgy0404/LearnGUI) and extract the screenshot files:
+
+```bash
+# Create data directory
+mkdir -p data/LearnGUI
+
+# Download dataset files 
+pip install -U huggingface_hub
+export HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download --repo-type dataset --resume-download lgy0404/LearnGUI --local-dir ./data/LearnGUI
+
+# Extract the screenshot archives
+cd data/LearnGUI/offline
+cat screenshot.z* > screenshot_combined.zip
+unzip screenshot_combined.zip -d screenshots
+```
+
+### Step 3: Generate Step-wise Prompts
+
+Use `gen_messages.py` to generate step-wise k-shot prompt datasets from the raw episode data:
+
+```bash
+python gen_messages.py \
+    --task_files data/LearnGUI/offline/task_split.json \
+    --data_path data/LearnGUI/offline/instruction_anno.zip \
+    --screenshot_dir data/LearnGUI/offline/screenshots \
+    --output_dir data/processed \
+    --workers 8
+```
+
+This script processes the raw data into a format suitable for the inference pipeline, creating train and test JSONL files with structured prompts for each step in every task.
+
+### Step 4: Run Inference and Evaluation
+
+Before running inference, set up your environment variables for the LLM API access:
+
+```bash
+# For OpenAI API
+export OPENAI_API_KEY=your_openai_api_key
+
+# For other provider-specific variables
+export API_BASE_URL=your_api_base_url  # If using a different API endpoint
+```
+
+Then run the inference and evaluation using `offline_infer.py`:
+
+```bash
+python offline_infer.py \
+    --input_file data/processed/tasks_test.jsonl \
+    --output_file results/learnact_results.jsonl \
+    --model gpt-4o-mini \
+    --workers 8
+```
+
+The script will:
+
+1. Process each test example through the LearnAct framework
+2. Generate predictions for each step
+3. Evaluate the predictions against ground truth
+4. Save detailed results and compute overall accuracy metrics
+
+You can monitor the progress and see real-time accuracy statistics during execution. After completion, a comprehensive analysis of type accuracy and full accuracy will be displayed.
+
 ## 📈 Benchmark Results
 
 Our experimental results show significant performance gains in both offline and online evaluations:
@@ -138,7 +221,6 @@ If you find our work helpful, please consider citing our paper:
 ## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=lgy0404/LearnAct&type=Date)](https://star-history.com/#lgy0404/LearnAct&Date)
-
 
 ## 📄 License
 
