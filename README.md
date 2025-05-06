@@ -123,8 +123,8 @@ Use `gen_messages.py` to generate step-wise k-shot prompt datasets from the raw 
 ```bash
 python gen_messages.py \
     --task_files data/LearnGUI/offline/task_split.json \
-    --data_path data/LearnGUI/offline/instruction_anno.zip \
-    --screenshot_dir data/LearnGUI/offline/screenshots \
+    --data_path data/LearnGUI/offline/low_level_instructions.json \
+    --screenshot_dir data/LearnGUI/offline/screenshot \
     --output_dir data/processed \
     --workers 8
 ```
