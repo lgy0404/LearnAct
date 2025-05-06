@@ -112,8 +112,8 @@ huggingface-cli download --repo-type dataset --resume-download lgy0404/LearnGUI 
 
 # Extract the screenshot archives
 cd data/LearnGUI/offline
-cat screenshot.z* > screenshot_combined.zip
-unzip screenshot_combined.zip -d screenshots
+zip --fix screenshot.zip --out screenshot_merged.zip
+unzip screenshot_merged.zip  -d screenshot
 ```
 
 ### Step 3: Generate Step-wise Prompts
