@@ -8,6 +8,7 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 from PIL import Image
+import os
 
 # Get absolute path of the current script and add project root to sys.path
 project_root = Path(__file__).resolve().parent.parent.parent
@@ -217,6 +218,11 @@ def main():
         output_path = input_path.parent / f"{input_path.stem}_results.jsonl"
     else:
         output_path = Path(args.output_file)
+    
+    # Ensure output directory exists
+    output_dir = output_path.parent
+    if not output_dir.exists():
+        os.makedirs(output_dir, exist_ok=True)
 
     print(f"Input file: {input_path}")
     print(f"Output file: {output_path}")

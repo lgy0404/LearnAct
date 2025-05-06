@@ -147,8 +147,8 @@ Then run the inference and evaluation using `offline_infer.py`:
 
 ```bash
 python offline_infer.py \
-    --input_file data/processed/tasks_test.jsonl \
-    --output_file results/learnact_results.jsonl \
+    --input_file data/processed/task_split_test.jsonl \
+    --output_file data/results/learnact_results.jsonl \
     --model gpt-4o-mini \
     --workers 8
 ```
