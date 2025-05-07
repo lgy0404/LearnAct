@@ -58,7 +58,7 @@ LearnGUI offers several advantages over existing GUI datasets:
 
 ### Dataset Statistics
 
-| Split         | K-shot | Tasks | Apps | Step actions | Avg Ins `<sub>`Sim `</sub>` | Avg UI `<sub>`Sim `</sub>` | Avg Act `<sub>`Sim `</sub>` | UI `<sub>`SH `</sub>`Act `<sub>`SH `</sub>` | UI `<sub>`SH `</sub>`Act `<sub>`SL `</sub>` | UI `<sub>`SL `</sub>`Act `<sub>`SH `</sub>` | UI `<sub>`SL `</sub>`Act `<sub>`SL `</sub>` |
+| Split         | K-shot | Tasks | Apps | Step actions | Avg Insₛᵢₘ | Avg UIₛᵢₘ | Avg Actₛᵢₘ | UIₛₕActₛₕ | UIₛₕActₛₗ | UIₛₗActₛₕ | UIₛₗActₛₗ |
 | ------------- | ------ | ----- | ---- | ------------ | ------------------------------- | ------------------------------ | ------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
 | Offline-Train | 1-shot | 2,001 | 44   | 26,184       | 0.845                           | 0.901                          | 0.858                           | 364                                                 | 400                                                 | 403                                                 | 834                                                 |
 | Offline-Train | 2-shot | 2,001 | 44   | 26,184       | 0.818                           | 0.898                          | 0.845                           | 216                                                 | 360                                                 | 358                                                 | 1,067                                               |
