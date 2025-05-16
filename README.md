@@ -11,7 +11,7 @@
   <img src="assets/teaser-final.drawio.png" alt="LearnAct Framework" width="100%">
 </div>
 
-## 🚀 News
+## 🔥 News
 
 - 🥳 [2025/05/05] Released the inference and evaluation code for LearnAct on LearnGUI-Offline!
 - 🤩 [2025/04/21] Released the [LearnGUI Benchmark](https://huggingface.co/datasets/lgy0404/LearnGUI)! We invite researchers and developers to explore our comprehensive dataset for demonstration-based learning in mobile GUI agents. Your feedback is valuable to us!
@@ -70,14 +70,14 @@ LearnGUI offers several advantages over existing GUI datasets:
 ### Dataset Statistics
 
 | Split         | K-shot | Tasks | Apps | Step actions | Avg Insₛᵢₘ | Avg UIₛᵢₘ | Avg Actₛᵢₘ | UIₛₕActₛₕ | UIₛₕActₛₗ | UIₛₗActₛₕ | UIₛₗActₛₗ |
-| ------------- | ------ | ----- | ---- | ------------ | ------------------------------- | ------------------------------ | ------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| Offline-Train | 1-shot | 2,001 | 44   | 26,184       | 0.845                           | 0.901                          | 0.858                           | 364                                                 | 400                                                 | 403                                                 | 834                                                 |
-| Offline-Train | 2-shot | 2,001 | 44   | 26,184       | 0.818                           | 0.898                          | 0.845                           | 216                                                 | 360                                                 | 358                                                 | 1,067                                               |
-| Offline-Train | 3-shot | 2,001 | 44   | 26,184       | 0.798                           | 0.895                          | 0.836                           | 152                                                 | 346                                                 | 310                                                 | 1,193                                               |
-| Offline-Test  | 1-shot | 251   | 9    | 3,469        | 0.798                           | 0.868                          | 0.867                           | 37                                                  | 49                                                  | 56                                                  | 109                                                 |
-| Offline-Test  | 2-shot | 251   | 9    | 3,469        | 0.767                           | 0.855                          | 0.853                           | 15                                                  | 42                                                  | 55                                                  | 139                                                 |
-| Offline-Test  | 3-shot | 251   | 9    | 3,469        | 0.745                           | 0.847                          | 0.847                           | 10                                                  | 36                                                  | 49                                                  | 156                                                 |
-| Online-Test   | 1-shot | 101   | 20   | 1,423        | -                               | -                              | -                               | -                                                   | -                                                   | -                                                   | -                                                   |
+| ------------- | ------ | ----- | ---- | ------------ | ------------- | ------------ | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Offline-Train | 1-shot | 2,001 | 44   | 26,184       | 0.845         | 0.901        | 0.858         | 364           | 400           | 403           | 834           |
+| Offline-Train | 2-shot | 2,001 | 44   | 26,184       | 0.818         | 0.898        | 0.845         | 216           | 360           | 358           | 1,067         |
+| Offline-Train | 3-shot | 2,001 | 44   | 26,184       | 0.798         | 0.895        | 0.836         | 152           | 346           | 310           | 1,193         |
+| Offline-Test  | 1-shot | 251   | 9    | 3,469        | 0.798         | 0.868        | 0.867         | 37            | 49            | 56            | 109           |
+| Offline-Test  | 2-shot | 251   | 9    | 3,469        | 0.767         | 0.855        | 0.853         | 15            | 42            | 55            | 139           |
+| Offline-Test  | 3-shot | 251   | 9    | 3,469        | 0.745         | 0.847        | 0.847         | 10            | 36            | 49            | 156           |
+| Online-Test   | 1-shot | 101   | 20   | 1,423        | -             | -            | -             | -             | -             | -             | -             |
 
 ## 🚀 LearnAct Framework
 
