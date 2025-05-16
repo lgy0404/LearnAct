@@ -17,6 +17,17 @@
 - 🤩 [2025/04/21] Released the [LearnGUI Benchmark](https://huggingface.co/datasets/lgy0404/LearnGUI)! We invite researchers and developers to explore our comprehensive dataset for demonstration-based learning in mobile GUI agents. Your feedback is valuable to us!
 - 🎉 [2025/04/18] Published the paper [LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark](https://arxiv.org/abs/2504.13805)! Follow our work as we explore new frontiers in few-shot learning for mobile GUI agents. Star our repo to stay updated!
 
+## 📝 Open Source Roadmap
+
+We are committed to open-sourcing all components of the LearnAct framework. Here's our plan:
+
+- ✅ **LearnGUI Benchmark**: Complete dataset available on [HuggingFace](https://huggingface.co/datasets/lgy0404/LearnGUI)
+- ✅ **LearnAct on LearnGUI-Offline**: Inference and evaluation code released
+- 🔜 **LearnAct on LearnGUI-Online**: Coming soon
+- 🔜 **Real-world Deployment Demo**: Implementation for practical applications coming soon
+
+Stay tuned for updates by starring this repository!
+
 ## Overview
 
 Mobile GUI agents show promise in automating tasks but face generalization challenges in diverse real-world scenarios. Traditional approaches using pre-training or fine-tuning with massive datasets struggle with the diversity of mobile applications and user-specific tasks. We propose enhancing mobile GUI agent capabilities through human demonstrations, focusing on improving performance in unseen scenarios rather than pursuing universal generalization through larger datasets.
