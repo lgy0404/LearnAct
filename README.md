@@ -12,7 +12,7 @@
 </div>
 
 ## 🔥 News
-
+- 🎊 [2026/04/07] Our paper has been accepted to ACL 2026 Findings!
 - 🥳 [2025/05/05] Released the inference and evaluation code for LearnAct on LearnGUI-Offline!
 - 🤩 [2025/04/21] Released the [LearnGUI Benchmark](https://huggingface.co/datasets/lgy0404/LearnGUI)! We invite researchers and developers to explore our comprehensive dataset for demonstration-based learning in mobile GUI agents. Your feedback is valuable to us!
 - 🎉 [2025/04/18] Published the paper [LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark](https://arxiv.org/abs/2504.13805)! Follow our work as we explore new frontiers in few-shot learning for mobile GUI agents. Star our repo to stay updated!
