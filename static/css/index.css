@@ -55,10 +55,37 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
+.publication-venue-row {
+    margin: 0.85rem 0 0.45rem;
+}
+
 .publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
+    display: inline-block;
+    padding: 0.38rem 0.85rem;
+    border: 1px solid rgba(42, 99, 132, 0.18);
+    border-radius: 999px;
+    background: rgba(31, 111, 139, 0.08);
+    color: #425466;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 1.02rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.publication-venue strong {
+    color: #1f6f8b;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+    .publication-venue-row {
+        margin-top: 0.7rem;
+    }
+
+    .publication-venue {
+        font-size: 0.96rem;
+        line-height: 1.35;
+    }
 }
 
 .publication-awards {
@@ -132,6 +159,3 @@ body {
 .eql-cntrb { 
   font-size: smaller;
 }
-
-
-
