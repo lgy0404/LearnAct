@@ -229,10 +229,6 @@ If you find our work helpful, please consider citing our paper:
 }
 ```
 
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=lgy0404/LearnAct&type=Date)](https://star-history.com/#lgy0404/LearnAct&Date)
-
 ## 📄 License
 
 This dataset is licensed under Apache License 2.0.
